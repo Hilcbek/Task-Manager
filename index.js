@@ -6,7 +6,7 @@ import morgan from 'morgan'
 import { router } from './router/router.js'
 let app = express();
 dotenv.config()
-app.use(cors({origin : 'http://localhost:5173', credentials : true}))
+app.use(cors({origin : ['http://localhost:5173','https://task-manager-mern-stack.netlify.app'], credentials : true}))
 app.use(morgan('tiny'))
 app.use(express.json())
 let PORT = process.env.PORT || 6000
